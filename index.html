@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>핀가이드 | 금융상품 상담 안내</title>
+<title>핀가이드 | 빠른심사 금융상품 상담</title>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18126831450"></script>
 <script>
@@ -19,236 +19,293 @@ gtag('config', 'AW-18126831450');
 *{margin:0;padding:0;box-sizing:border-box;}
 
 :root{
-  --ink:#0f172a;
-  --deep:#1e293b;
-  --mint:#00c2a8;
-  --mint2:#e8fff9;
-  --cream:#fbfaf6;
-  --card:#ffffff;
-  --text:#172033;
-  --sub:#64748b;
-  --line:#e6ebf1;
-  --orange:#ff8a3d;
+  --blue:#1268ff;
+  --blue2:#063d9d;
+  --navy:#071735;
+  --dark:#07111f;
+  --text:#111827;
+  --sub:#6b7280;
+  --line:#e8edf5;
+  --bg:#f5f8fd;
+  --white:#fff;
+  --green:#15b875;
 }
+
+html{scroll-behavior:smooth;}
 
 body{
   font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Pretendard','Noto Sans KR',sans-serif;
-  background:var(--cream);
+  background:#e9f0fb;
   color:var(--text);
   padding-bottom:86px;
 }
 
-.wrap{
+.page{
   max-width:480px;
   margin:0 auto;
   min-height:100vh;
-  background:linear-gradient(180deg,#fbfaf6 0%,#f2f7f5 100%);
+  background:var(--bg);
 }
 
-.appbar{
-  max-width:480px;
-  margin:0 auto;
-  height:66px;
+.top{
+  height:64px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:0 20px;
+  padding:0 18px;
+  background:#fff;
+  border-bottom:1px solid #edf1f7;
 }
 
-.logo{
+.brand{
   display:flex;
   align-items:center;
-  gap:10px;
-  font-size:20px;
+  gap:9px;
   font-weight:950;
-  letter-spacing:-0.8px;
-  color:var(--ink);
+  font-size:20px;
+  letter-spacing:-0.7px;
+  color:var(--navy);
 }
 
-.logo-dot{
-  width:34px;
-  height:34px;
-  border-radius:13px;
-  background:var(--ink);
+.brand-badge{
+  width:32px;
+  height:32px;
+  border-radius:11px;
+  background:linear-gradient(135deg,var(--blue),var(--navy));
   color:#fff;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:15px;
-  font-weight:900;
+  font-size:14px;
+  font-weight:950;
 }
 
-.appbar-pill{
+.top-label{
   font-size:11px;
-  font-weight:900;
-  color:#057c6d;
-  background:var(--mint2);
-  border:1px solid rgba(0,194,168,0.18);
+  color:var(--blue);
+  background:#edf5ff;
   padding:8px 10px;
   border-radius:999px;
+  font-weight:900;
 }
 
 .hero{
-  padding:14px 20px 22px;
+  padding:18px 16px 20px;
+  background:linear-gradient(180deg,#fff 0%,#f5f8fd 100%);
 }
 
-.hero-card{
-  position:relative;
+.hero-visual{
+  border-radius:30px;
   overflow:hidden;
-  background:#102033;
-  border-radius:34px;
-  padding:28px 22px 22px;
-  color:#fff;
-  box-shadow:0 22px 48px rgba(15,23,42,0.22);
+  background:#0b1f46;
+  box-shadow:0 18px 44px rgba(5,39,95,0.20);
+  margin-bottom:20px;
 }
 
-.hero-card:before{
-  content:"";
-  position:absolute;
-  width:260px;
-  height:260px;
-  right:-90px;
-  top:-90px;
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(0,194,168,0.8),rgba(0,194,168,0.12) 55%,transparent 68%);
+.hero-visual img{
+  width:100%;
+  display:block;
 }
 
-.hero-card:after{
-  content:"";
-  position:absolute;
-  width:150px;
-  height:150px;
-  left:-55px;
-  bottom:-60px;
-  border-radius:50%;
-  background:rgba(255,255,255,0.08);
+.hero-title{
+  padding:0 4px;
 }
 
-.hero-label{
-  position:relative;
-  z-index:1;
-  display:inline-flex;
-  align-items:center;
-  padding:8px 12px;
-  border-radius:999px;
-  background:rgba(255,255,255,0.12);
-  color:#dffdf8;
+.hero-title .kicker{
+  display:inline-block;
   font-size:12px;
+  color:#064fc4;
+  background:#eaf2ff;
+  padding:8px 11px;
+  border-radius:999px;
   font-weight:900;
-  margin-bottom:18px;
+  margin-bottom:14px;
 }
 
-.hero h1{
-  position:relative;
-  z-index:1;
-  font-size:32px;
-  line-height:1.2;
-  letter-spacing:-1.4px;
+.hero-title h1{
+  font-size:34px;
+  line-height:1.16;
+  letter-spacing:-1.55px;
   font-weight:950;
+  color:var(--navy);
   margin-bottom:12px;
 }
 
-.hero p{
-  position:relative;
-  z-index:1;
+.hero-title p{
   font-size:14px;
-  line-height:1.65;
-  color:#cbd5e1;
-  margin-bottom:24px;
+  line-height:1.62;
+  color:#5f6b7a;
+  margin-bottom:18px;
 }
 
-.hero-cta-row{
-  position:relative;
-  z-index:1;
-  display:flex;
-  gap:8px;
+.hero-actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
 }
 
-.hero-mini{
-  flex:1;
-  background:rgba(255,255,255,0.12);
-  border:1px solid rgba(255,255,255,0.12);
-  border-radius:18px;
-  padding:13px 10px;
+.hero-chip{
+  padding:15px 13px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  box-shadow:0 8px 22px rgba(7,23,53,0.05);
 }
 
-.hero-mini strong{
+.hero-chip strong{
   display:block;
-  font-size:14px;
+  font-size:15px;
+  color:var(--navy);
+  font-weight:950;
   margin-bottom:5px;
 }
 
-.hero-mini span{
-  font-size:11px;
-  color:#cbd5e1;
+.hero-chip span{
+  font-size:12px;
+  color:var(--sub);
 }
 
-.floating-form{
-  margin:4px 20px 18px;
+.feature{
+  padding:2px 16px 18px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.feature-card{
   background:#fff;
-  border-radius:30px;
-  padding:22px 18px;
-  box-shadow:0 16px 36px rgba(15,23,42,0.08);
-  border:1px solid rgba(15,23,42,0.05);
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:17px 14px;
+  min-height:118px;
+  box-shadow:0 9px 24px rgba(7,23,53,0.05);
 }
 
-.form-title{
+.feature-icon{
+  width:36px;
+  height:36px;
+  border-radius:14px;
+  background:#eaf2ff;
+  color:var(--blue);
   display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap:12px;
-  margin-bottom:17px;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+  font-weight:950;
+  margin-bottom:11px;
 }
 
-.form-title h2{
-  font-size:23px;
+.feature-card strong{
+  display:block;
+  font-size:15px;
+  color:var(--navy);
+  font-weight:950;
+  margin-bottom:6px;
+}
+
+.feature-card p{
+  font-size:12px;
+  color:var(--sub);
+  line-height:1.45;
+}
+
+.product{
+  margin:0 16px 18px;
+  background:#fff;
+  border-radius:28px;
+  padding:22px 18px;
+  border:1px solid var(--line);
+  box-shadow:0 10px 28px rgba(7,23,53,0.06);
+}
+
+.section-title{
+  font-size:22px;
   line-height:1.25;
   letter-spacing:-0.8px;
-  color:var(--ink);
   font-weight:950;
+  color:var(--navy);
+  margin-bottom:14px;
 }
 
-.form-title span{
-  flex:0 0 auto;
-  font-size:11px;
-  font-weight:900;
-  color:#057c6d;
-  background:var(--mint2);
-  padding:8px 9px;
-  border-radius:999px;
+.product-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.product-item{
+  background:#f6f9fe;
+  border:1px solid #edf2f9;
+  border-radius:20px;
+  padding:15px 12px;
+}
+
+.product-item span{
+  display:block;
+  font-size:12px;
+  color:#718096;
+  margin-bottom:6px;
+  font-weight:800;
+}
+
+.product-item strong{
+  display:block;
+  font-size:16px;
+  color:var(--navy);
+  font-weight:950;
+  letter-spacing:-0.4px;
+}
+
+.form-wrap{
+  margin:0 16px 18px;
+  background:linear-gradient(180deg,#0b1f46,#071735);
+  border-radius:30px;
+  padding:22px 18px 20px;
+  box-shadow:0 20px 44px rgba(7,23,53,0.26);
+}
+
+.form-wrap h2{
+  font-size:24px;
+  color:#fff;
+  letter-spacing:-0.9px;
+  font-weight:950;
+  margin-bottom:7px;
 }
 
 .form-desc{
   font-size:12px;
-  line-height:1.55;
-  color:var(--sub);
-  margin:-7px 0 14px;
+  line-height:1.58;
+  color:#c5d4eb;
+  margin-bottom:16px;
 }
 
 .input{
   width:100%;
   height:56px;
-  border:none;
-  outline:none;
-  border-radius:19px;
-  background:#f5f7fa;
+  border:0;
+  outline:0;
+  border-radius:18px;
+  background:#fff;
   padding:0 15px;
   font-size:15px;
   color:var(--text);
   margin-bottom:10px;
+  font-weight:750;
 }
+
+.input::placeholder{color:#98a2b3;font-weight:600;}
 
 .input:focus{
-  background:#fff;
-  box-shadow:0 0 0 2px var(--mint),0 8px 18px rgba(0,194,168,0.08);
+  box-shadow:0 0 0 3px rgba(18,104,255,0.28);
 }
 
-.agree-box{
+.agree{
   margin-top:10px;
   padding:14px;
-  background:#f8fafc;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.10);
   border-radius:18px;
-  color:#475569;
+  color:#e9f1ff;
 }
 
 .agree-line{
@@ -262,198 +319,99 @@ body{
 .agree-line input{
   width:18px;
   height:18px;
+  accent-color:var(--blue);
 }
 
 .notice{
-  font-size:11px;
-  color:#8794a6;
-  line-height:1.45;
   margin-top:7px;
+  font-size:11px;
+  color:#b6c5da;
+  line-height:1.45;
 }
 
 .submit-btn{
   width:100%;
   height:58px;
+  border:0;
+  border-radius:19px;
   margin-top:16px;
-  border:none;
-  border-radius:20px;
-  background:linear-gradient(135deg,var(--mint),#00a3ff);
+  background:linear-gradient(135deg,#1268ff,#00a3ff);
   color:#fff;
   font-size:17px;
   font-weight:950;
-  box-shadow:0 16px 30px rgba(0,194,168,0.24);
+  box-shadow:0 15px 28px rgba(18,104,255,0.35);
   cursor:pointer;
 }
 
 .submit-btn:disabled{
-  background:#a7b0bd;
+  background:#9aa4b2;
   box-shadow:none;
 }
 
-.story{
-  margin:0 20px 18px;
-}
-
-.story-title{
-  display:flex;
-  align-items:end;
-  justify-content:space-between;
-  margin-bottom:12px;
-}
-
-.story-title h3{
-  font-size:21px;
-  color:var(--ink);
-  letter-spacing:-0.6px;
-  font-weight:950;
-}
-
-.story-title p{
-  font-size:12px;
-  color:var(--sub);
-}
-
-.card-stack{
-  display:grid;
-  gap:10px;
-}
-
-.info-card{
+.step{
+  margin:0 16px 18px;
   background:#fff;
-  border-radius:24px;
-  padding:18px;
-  box-shadow:0 10px 24px rgba(15,23,42,0.05);
-  display:flex;
-  align-items:center;
-  gap:14px;
-}
-
-.info-icon{
-  width:44px;
-  height:44px;
-  border-radius:17px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#f0fdfa;
-  color:#057c6d;
-  font-size:22px;
-  flex:0 0 44px;
-}
-
-.info-card:nth-child(2) .info-icon{
-  background:#fff7ed;
-  color:var(--orange);
-}
-
-.info-card:nth-child(3) .info-icon{
-  background:#eff6ff;
-  color:#2563eb;
-}
-
-.info-card strong{
-  display:block;
-  font-size:15px;
-  font-weight:950;
-  color:var(--ink);
-  margin-bottom:5px;
-}
-
-.info-card span{
-  display:block;
-  font-size:12px;
-  color:var(--sub);
-  line-height:1.45;
-}
-
-.timeline{
-  margin:0 20px 18px;
-  background:#fff;
-  border-radius:30px;
+  border-radius:28px;
   padding:22px 18px;
-  box-shadow:0 10px 24px rgba(15,23,42,0.05);
+  border:1px solid var(--line);
 }
 
-.section-title{
-  font-size:21px;
-  font-weight:950;
-  color:var(--ink);
-  letter-spacing:-0.6px;
-  margin-bottom:17px;
-}
-
-.time-row{
-  position:relative;
+.step-row{
   display:flex;
-  gap:13px;
-  padding-bottom:17px;
+  gap:12px;
+  padding:14px 0;
+  border-bottom:1px solid var(--line);
 }
 
-.time-row:last-child{
-  padding-bottom:0;
-}
+.step-row:last-child{border-bottom:0;padding-bottom:0;}
 
-.time-row:before{
-  content:"";
-  position:absolute;
-  left:15px;
-  top:34px;
-  bottom:0;
-  width:1px;
-  background:#dce5ee;
-}
-
-.time-row:last-child:before{display:none;}
-
-.time-num{
-  width:31px;
-  height:31px;
+.step-num{
+  width:32px;
+  height:32px;
+  flex:0 0 32px;
   border-radius:50%;
-  background:var(--ink);
-  color:#fff;
+  background:#eaf2ff;
+  color:var(--blue);
   display:flex;
   align-items:center;
   justify-content:center;
   font-size:12px;
   font-weight:950;
-  flex:0 0 31px;
-  position:relative;
-  z-index:1;
 }
 
-.time-text strong{
+.step-row strong{
   display:block;
   font-size:15px;
-  color:var(--ink);
-  margin-bottom:5px;
+  color:var(--navy);
   font-weight:950;
+  margin-bottom:5px;
 }
 
-.time-text span{
+.step-row span{
   font-size:12px;
   color:var(--sub);
-  line-height:1.45;
+  line-height:1.5;
 }
 
 .live{
-  margin:0 20px 20px;
-  background:#102033;
-  color:#fff;
-  border-radius:30px;
+  margin:0 16px 22px;
+  background:#fff;
+  border-radius:28px;
   padding:22px 18px;
-  box-shadow:0 18px 38px rgba(15,23,42,0.18);
+  border:1px solid var(--line);
 }
 
 .live-title{
-  font-size:20px;
+  font-size:22px;
+  color:var(--navy);
   font-weight:950;
-  letter-spacing:-0.5px;
+  letter-spacing:-0.7px;
   margin-bottom:5px;
 }
 
 .live-sub{
   font-size:12px;
-  color:#cbd5e1;
+  color:var(--sub);
   margin-bottom:11px;
 }
 
@@ -462,11 +420,11 @@ body{
   justify-content:space-between;
   align-items:center;
   padding:13px 0;
-  border-bottom:1px solid rgba(255,255,255,0.1);
+  border-bottom:1px solid var(--line);
   font-size:13px;
 }
 
-.live-item:last-child{border-bottom:none;}
+.live-item:last-child{border-bottom:0;}
 
 .live-left{
   display:flex;
@@ -475,7 +433,7 @@ body{
 }
 
 .live-name{font-weight:950;}
-.live-amount{color:#dbeafe;font-weight:800;}
+.live-amount{color:#4b5563;font-weight:800;}
 
 .badge{
   padding:6px 9px;
@@ -484,45 +442,41 @@ body{
   font-weight:950;
 }
 
-.wait{background:#e0f2fe;color:#0369a1;}
-.done{background:#dcfce7;color:#15803d;}
-.ok{background:#ffedd5;color:#c2410c;}
+.wait{background:#eaf2ff;color:#1268ff;}
+.done{background:#ecfdf3;color:#15803d;}
+.ok{background:#fff7ed;color:#c2410c;}
 
 .footer{
   max-width:480px;
   margin:0 auto;
-  background:#0f172a;
-  color:#aebbd0;
+  background:#071735;
+  color:#b8c5d9;
   padding:30px 20px 96px;
   font-size:11px;
   line-height:1.75;
 }
 
-.footer strong{
-  color:#fff;
-}
+.footer strong{color:#fff;}
 
 .company-info{
-  background:rgba(255,255,255,0.055);
+  background:rgba(255,255,255,0.06);
   border:1px solid rgba(255,255,255,0.08);
-  border-radius:20px;
+  border-radius:18px;
   padding:15px;
   margin-bottom:22px;
 }
 
 .footer-warning,
-.footer-info{
-  margin-bottom:22px;
-}
+.footer-info{margin-bottom:22px;}
 
 .footer a{
-  color:#e5edf8;
+  color:#e3ecff;
   text-decoration:none;
 }
 
 .footer-copy{
   text-align:center;
-  color:#8492a8;
+  color:#8fa0bb;
   margin-top:18px;
 }
 
@@ -536,16 +490,16 @@ body{
   padding:12px 15px 14px;
   background:rgba(255,255,255,0.94);
   backdrop-filter:blur(14px);
-  border-top:1px solid rgba(15,23,42,0.06);
+  border-top:1px solid rgba(7,23,53,0.08);
   z-index:9998;
 }
 
 .bottom-cta button{
   width:100%;
   height:54px;
-  border:none;
-  border-radius:19px;
-  background:var(--ink);
+  border:0;
+  border-radius:18px;
+  background:var(--blue);
   color:#fff;
   font-size:16px;
   font-weight:950;
@@ -555,7 +509,7 @@ body{
   display:none;
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,0.55);
+  background:rgba(0,0,0,0.62);
   z-index:10000;
   padding:18px;
 }
@@ -566,10 +520,11 @@ body{
   max-height:76vh;
   overflow-y:auto;
   background:#fff;
+  color:#111;
   margin:72px auto 0;
   border-radius:24px;
   padding:22px 20px;
-  box-shadow:0 20px 60px rgba(0,0,0,0.25);
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
 }
 
 .policy-head{
@@ -584,18 +539,18 @@ body{
 
 .policy-head h3{
   font-size:20px;
-  color:#0f172a;
+  color:#111;
   font-weight:950;
-  letter-spacing:-0.5px;
+  letter-spacing:-.5px;
 }
 
 .policy-close{
   width:34px;
   height:34px;
-  border:none;
+  border:0;
   border-radius:50%;
   background:#f2f4f6;
-  color:#333d4b;
+  color:#333;
   font-size:22px;
   line-height:34px;
   cursor:pointer;
@@ -604,77 +559,115 @@ body{
 .policy-content{
   font-size:13px;
   line-height:1.75;
-  color:#333d4b;
+  color:#333;
 }
 
 .policy-content strong{
-  color:#0f172a;
+  color:#111;
   font-size:14px;
 }
 
 .policy-content p{margin-bottom:10px;}
 
 @media(max-width:360px){
-  .hero h1{font-size:29px;}
-  .form-title h2{font-size:21px;}
+  .hero-title h1{font-size:31px;}
 }
 </style>
 </head>
 
 <body>
 
-<div class="wrap">
+<div class="page">
 
-  <header class="appbar">
-    <div class="logo">
-      <div class="logo-dot">F</div>
+  <header class="top">
+    <div class="brand">
+      <div class="brand-badge">F</div>
       핀가이드
     </div>
-    <div class="appbar-pill">상담 안내</div>
+    <div class="top-label">빠른심사 상담</div>
   </header>
 
   <section class="hero">
-    <div class="hero-card">
-      <div class="hero-label">비대면 금융상품 상담</div>
-      <h1>필요한 금액,<br>간단하게 상담하세요</h1>
+    <div class="hero-visual">
+      <img src="data:image/svg+xml;charset=UTF-8,%0A%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22900%22%20height%3D%22620%22%20viewBox%3D%220%200%20900%20620%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230b6bff%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2252%25%22%20stop-color%3D%22%231e40af%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23071735%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22card%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ffffff%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23edf5ff%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22shadow%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2220%22%20stdDeviation%3D%2220%22%20flood-color%3D%22%2300143d%22%20flood-opacity%3D%22.25%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%22900%22%20height%3D%22620%22%20rx%3D%2256%22%20fill%3D%22url%28%23bg%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%22740%22%20cy%3D%22120%22%20r%3D%22140%22%20fill%3D%22%2368d7ff%22%20opacity%3D%22.18%22/%3E%0A%20%20%3Ccircle%20cx%3D%22130%22%20cy%3D%22520%22%20r%3D%22190%22%20fill%3D%22%23ffffff%22%20opacity%3D%22.08%22/%3E%0A%20%20%3Cpath%20d%3D%22M80%20155%20C190%2088%2C%20315%2095%2C%20405%20142%20S605%20208%2C%20790%2095%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-opacity%3D%22.18%22%20stroke-width%3D%223%22/%3E%0A%20%20%3Cg%20filter%3D%22url%28%23shadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2292%22%20y%3D%22118%22%20width%3D%22330%22%20height%3D%22390%22%20rx%3D%2238%22%20fill%3D%22url%28%23card%29%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22124%22%20y%3D%22158%22%20width%3D%22140%22%20height%3D%2218%22%20rx%3D%229%22%20fill%3D%22%230b6bff%22%20opacity%3D%22.22%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22124%22%20y%3D%22195%22%20width%3D%22236%22%20height%3D%2234%22%20rx%3D%2217%22%20fill%3D%22%230b1f46%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22124%22%20y%3D%22257%22%20width%3D%22242%22%20height%3D%2270%22%20rx%3D%2222%22%20fill%3D%22%23f2f7ff%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%22280%22%20width%3D%2272%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22%239db5de%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%22305%22%20width%3D%22154%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22%23c7d7ef%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22124%22%20y%3D%22350%22%20width%3D%22242%22%20height%3D%2270%22%20rx%3D%2222%22%20fill%3D%22%23f2f7ff%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%22373%22%20width%3D%2298%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22%239db5de%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%22398%22%20width%3D%22138%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22%23c7d7ef%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22124%22%20y%3D%22445%22%20width%3D%22242%22%20height%3D%2230%22%20rx%3D%2215%22%20fill%3D%22%230b6bff%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20filter%3D%22url%28%23shadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%22485%22%20y%3D%22160%22%20width%3D%22290%22%20height%3D%22300%22%20rx%3D%2240%22%20fill%3D%22%23ffffff%22%20opacity%3D%22.98%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22630%22%20cy%3D%22255%22%20r%3D%2270%22%20fill%3D%22%23edf5ff%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M584%20255%20l32%2032%20l68%20-82%22%20fill%3D%22none%22%20stroke%3D%22%230b6bff%22%20stroke-width%3D%2218%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22540%22%20y%3D%22355%22%20width%3D%22180%22%20height%3D%2218%22%20rx%3D%229%22%20fill%3D%22%230b1f46%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22565%22%20y%3D%22390%22%20width%3D%22130%22%20height%3D%2213%22%20rx%3D%227%22%20fill%3D%22%239db5de%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20opacity%3D%22.95%22%3E%0A%20%20%20%20%3Crect%20x%3D%22555%22%20y%3D%2288%22%20width%3D%22180%22%20height%3D%2254%22%20rx%3D%2227%22%20fill%3D%22%23ffffff%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22585%22%20cy%3D%22115%22%20r%3D%2213%22%20fill%3D%22%2322c55e%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22610%22%20y%3D%22105%22%20width%3D%2278%22%20height%3D%2210%22%20rx%3D%225%22%20fill%3D%22%230b1f46%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22610%22%20y%3D%22124%22%20width%3D%2254%22%20height%3D%228%22%20rx%3D%224%22%20fill%3D%22%239db5de%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E%0A" alt="핀가이드 비대면 금융 상담 이미지">
+    </div>
+
+    <div class="hero-title">
+      <div class="kicker">모바일 금융상품 상담 안내</div>
+      <h1>필요할 때 빠르게,<br>조건에 맞게 상담하세요</h1>
       <p>
-        복잡한 조건 입력 없이 필요한 정보만 남기면<br>
+        복잡한 절차 없이 필요한 정보를 남겨주시면<br>
         상담사가 확인 후 순차적으로 안내드립니다.
       </p>
 
-      <div class="hero-cta-row">
-        <div class="hero-mini">
-          <strong>간편 접수</strong>
-          <span>모바일 신청</span>
+      <div class="hero-actions">
+        <div class="hero-chip">
+          <strong>빠른심사</strong>
+          <span>접수 후 순차 안내</span>
         </div>
-        <div class="hero-mini">
-          <strong>조건 안내</strong>
-          <span>상황별 상담</span>
-        </div>
-        <div class="hero-mini">
+        <div class="hero-chip">
           <strong>신용조회 없음</strong>
-          <span>접수 단계</span>
+          <span>상담 접수 단계</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="floating-form" id="formArea">
-    <div class="form-title">
-      <h2>상담 신청하기</h2>
-      <span>1분 접수</span>
+  <section class="feature">
+    <div class="feature-card">
+      <div class="feature-icon">01</div>
+      <strong>빠른심사</strong>
+      <p>신청 내용을 확인 후 상담사가 순차적으로 안내합니다.</p>
     </div>
 
+    <div class="feature-card">
+      <div class="feature-icon">02</div>
+      <strong>신용등급 영향 없음</strong>
+      <p>상담 신청만으로는 신용조회가 진행되지 않습니다.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">03</div>
+      <strong>서류 간소화</strong>
+      <p>필요 정보 중심으로 간편하게 상담을 접수합니다.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">04</div>
+      <strong>전문 상담 안내</strong>
+      <p>고객 조건에 맞춰 가능한 상품을 안내합니다.</p>
+    </div>
+  </section>
+
+  <section class="product">
+    <div class="section-title">간편상담신청</div>
+
+    <div class="product-grid">
+      <div class="product-item">
+        <span>최대한도</span>
+        <strong>1,000만원</strong>
+      </div>
+      <div class="product-item">
+        <span>대출대상</span>
+        <strong>만 20세 이상</strong>
+      </div>
+      <div class="product-item">
+        <span>대출기간</span>
+        <strong>12개월 ~ 60개월</strong>
+      </div>
+      <div class="product-item">
+        <span>대출금리</span>
+        <strong>연 20% 이내</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-wrap" id="formArea">
+    <h2>무료 상담신청</h2>
     <p class="form-desc">
       본 서비스는 금융상품을 직접 제공하지 않으며,<br>
       고객 정보에 따라 제휴 금융사의 상품을 안내하는 중개 서비스입니다.
     </p>
-
-    <select class="input" id="gender">
-      <option value="">성별 선택</option>
-      <option value="남">남</option>
-      <option value="여">여</option>
-    </select>
 
     <input class="input" id="name" placeholder="이름">
     <input class="input" id="phone" placeholder="전화번호">
@@ -687,7 +680,7 @@ body{
       <option>3000만원 이상</option>
     </select>
 
-    <div class="agree-box">
+    <div class="agree">
       <div class="agree-line">
         <input type="checkbox" id="agree" checked required>
         <label for="agree">개인정보 수집 및 이용에 동의합니다.</label>
@@ -700,80 +693,47 @@ body{
     <button class="submit-btn" id="submitBtn" onclick="sendTelegram()">상담 조건 확인하기</button>
   </section>
 
-  <section class="story">
-    <div class="story-title">
-      <h3>핀가이드 이용 포인트</h3>
-      <p>간단하고 명확하게</p>
-    </div>
+  <section class="step">
+    <div class="section-title">간편한 상담 절차</div>
 
-    <div class="card-stack">
-      <div class="info-card">
-        <div class="info-icon">✓</div>
-        <div>
-          <strong>필수 정보만 입력</strong>
-          <span>생년월일, 연락시간, 연체여부 항목 없이 간단히 접수합니다.</span>
-        </div>
-      </div>
-
-      <div class="info-card">
-        <div class="info-icon">↗</div>
-        <div>
-          <strong>비대면 상담 안내</strong>
-          <span>방문 없이 입력 정보 기준으로 상담 안내가 진행됩니다.</span>
-        </div>
-      </div>
-
-      <div class="info-card">
-        <div class="info-icon">○</div>
-        <div>
-          <strong>진행 여부 선택</strong>
-          <span>상담 내용을 확인한 뒤 진행 여부를 직접 결정할 수 있습니다.</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="timeline">
-    <div class="section-title">진행 순서</div>
-
-    <div class="time-row">
-      <div class="time-num">1</div>
-      <div class="time-text">
+    <div class="step-row">
+      <div class="step-num">1</div>
+      <div>
         <strong>상담 신청</strong>
-        <span>성별, 이름, 연락처, 필요금액만 입력합니다.</span>
+        <span>이름, 연락처, 필요금액을 입력합니다.</span>
       </div>
     </div>
 
-    <div class="time-row">
-      <div class="time-num">2</div>
-      <div class="time-text">
-        <strong>상담사 확인</strong>
-        <span>입력하신 내용을 기준으로 상담 가능 여부를 확인합니다.</span>
+    <div class="step-row">
+      <div class="step-num">2</div>
+      <div>
+        <strong>상담 확인</strong>
+        <span>전문 상담사가 접수 내용을 확인합니다.</span>
       </div>
     </div>
 
-    <div class="time-row">
-      <div class="time-num">3</div>
-      <div class="time-text">
-        <strong>상품 안내</strong>
-        <span>고객 조건에 따라 가능한 상품을 비교 안내합니다.</span>
+    <div class="step-row">
+      <div class="step-num">3</div>
+      <div>
+        <strong>빠른심사 안내</strong>
+        <span>고객 조건에 따라 가능한 상품을 안내합니다.</span>
       </div>
     </div>
 
-    <div class="time-row">
-      <div class="time-num">4</div>
-      <div class="time-text">
-        <strong>진행 선택</strong>
-        <span>상담 내용을 확인한 뒤 진행 여부를 결정합니다.</span>
+    <div class="step-row">
+      <div class="step-num">4</div>
+      <div>
+        <strong>진행 여부 선택</strong>
+        <span>상담 내용을 확인한 뒤 직접 결정합니다.</span>
       </div>
     </div>
   </section>
 
-  <div class="live">
-    <div class="live-title">최근 상담 접수 현황</div>
+  <section class="live">
+    <div class="live-title">실시간 상담 접수 현황</div>
     <div class="live-sub">개인정보 보호를 위해 일부 정보는 마스킹 처리됩니다.</div>
     <div id="list"></div>
-  </div>
+  </section>
 
 </div>
 
@@ -826,7 +786,7 @@ body{
 
 <div class="bottom-cta">
   <button onclick="document.getElementById('formArea').scrollIntoView({behavior:'smooth'});">
-    상담 신청 바로가기
+    무료 상담신청
   </button>
 </div>
 
@@ -882,7 +842,6 @@ let isSubmitting = false;
 
 function sendTelegram(){
 
-const gender = document.getElementById("gender").value;
 const name = document.getElementById("name").value;
 const phone = document.getElementById("phone").value;
 const amount = document.getElementById("amount").value;
@@ -893,7 +852,7 @@ if(!agree){
   return;
 }
 
-if(!gender || !name || !phone || amount === "필요금액 선택"){
+if(!name || !phone || amount === "필요금액 선택"){
   alert("모든 항목을 입력해주세요.");
   return;
 }
@@ -923,7 +882,6 @@ const url =
   "https://script.google.com/macros/s/AKfycbzML7PkMvnUhuZYPnLolGBK4cFXYbOgL_MmRFD-zIpzPcvH39pLGXrwdMaMah9O0T7v/exec"
   + "?secret=" + SECRET
   + "&referer=" + encodeURIComponent(location.href)
-  + "&gender=" + encodeURIComponent(gender)
   + "&name=" + encodeURIComponent(name)
   + "&phone=" + encodeURIComponent(phone)
   + "&amount=" + encodeURIComponent(amount);
@@ -973,7 +931,7 @@ function openPolicy(type){
       <p>드림인터내셔널대부중개는 핀가이드 상담 신청 및 금융상품 안내를 위해 아래와 같은 개인정보를 수집·이용합니다.</p>
 
       <strong>1. 수집 항목</strong><br>
-      성별, 이름, 연락처, 필요금액 등<br><br>
+      이름, 연락처, 필요금액 등<br><br>
 
       <strong>2. 이용 목적</strong><br>
       상담 신청 확인, 금융상품 상담 안내, 고객 문의 응대, 제휴 금융사 상품 안내<br><br>
