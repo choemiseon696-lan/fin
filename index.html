@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>핀가이드 | 금융상품 상담 안내</title>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18126831450"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-18126831450');
+</script>
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+:root{
+  --ink:#0f172a;
+  --deep:#1e293b;
+  --mint:#00c2a8;
+  --mint2:#e8fff9;
+  --cream:#fbfaf6;
+  --card:#ffffff;
+  --text:#172033;
+  --sub:#64748b;
+  --line:#e6ebf1;
+  --orange:#ff8a3d;
+}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Pretendard','Noto Sans KR',sans-serif;
+  background:var(--cream);
+  color:var(--text);
+  padding-bottom:86px;
+}
+
+.wrap{
+  max-width:480px;
+  margin:0 auto;
+  min-height:100vh;
+  background:linear-gradient(180deg,#fbfaf6 0%,#f2f7f5 100%);
+}
+
+.appbar{
+  max-width:480px;
+  margin:0 auto;
+  height:66px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 20px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:20px;
+  font-weight:950;
+  letter-spacing:-0.8px;
+  color:var(--ink);
+}
+
+.logo-dot{
+  width:34px;
+  height:34px;
+  border-radius:13px;
+  background:var(--ink);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:15px;
+  font-weight:900;
+}
+
+.appbar-pill{
+  font-size:11px;
+  font-weight:900;
+  color:#057c6d;
+  background:var(--mint2);
+  border:1px solid rgba(0,194,168,0.18);
+  padding:8px 10px;
+  border-radius:999px;
+}
+
+.hero{
+  padding:14px 20px 22px;
+}
+
+.hero-card{
+  position:relative;
+  overflow:hidden;
+  background:#102033;
+  border-radius:34px;
+  padding:28px 22px 22px;
+  color:#fff;
+  box-shadow:0 22px 48px rgba(15,23,42,0.22);
+}
+
+.hero-card:before{
+  content:"";
+  position:absolute;
+  width:260px;
+  height:260px;
+  right:-90px;
+  top:-90px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(0,194,168,0.8),rgba(0,194,168,0.12) 55%,transparent 68%);
+}
+
+.hero-card:after{
+  content:"";
+  position:absolute;
+  width:150px;
+  height:150px;
+  left:-55px;
+  bottom:-60px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.08);
+}
+
+.hero-label{
+  position:relative;
+  z-index:1;
+  display:inline-flex;
+  align-items:center;
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.12);
+  color:#dffdf8;
+  font-size:12px;
+  font-weight:900;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  position:relative;
+  z-index:1;
+  font-size:32px;
+  line-height:1.2;
+  letter-spacing:-1.4px;
+  font-weight:950;
+  margin-bottom:12px;
+}
+
+.hero p{
+  position:relative;
+  z-index:1;
+  font-size:14px;
+  line-height:1.65;
+  color:#cbd5e1;
+  margin-bottom:24px;
+}
+
+.hero-cta-row{
+  position:relative;
+  z-index:1;
+  display:flex;
+  gap:8px;
+}
+
+.hero-mini{
+  flex:1;
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:18px;
+  padding:13px 10px;
+}
+
+.hero-mini strong{
+  display:block;
+  font-size:14px;
+  margin-bottom:5px;
+}
+
+.hero-mini span{
+  font-size:11px;
+  color:#cbd5e1;
+}
+
+.floating-form{
+  margin:4px 20px 18px;
+  background:#fff;
+  border-radius:30px;
+  padding:22px 18px;
+  box-shadow:0 16px 36px rgba(15,23,42,0.08);
+  border:1px solid rgba(15,23,42,0.05);
+}
+
+.form-title{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:17px;
+}
+
+.form-title h2{
+  font-size:23px;
+  line-height:1.25;
+  letter-spacing:-0.8px;
+  color:var(--ink);
+  font-weight:950;
+}
+
+.form-title span{
+  flex:0 0 auto;
+  font-size:11px;
+  font-weight:900;
+  color:#057c6d;
+  background:var(--mint2);
+  padding:8px 9px;
+  border-radius:999px;
+}
+
+.form-desc{
+  font-size:12px;
+  line-height:1.55;
+  color:var(--sub);
+  margin:-7px 0 14px;
+}
+
+.input{
+  width:100%;
+  height:56px;
+  border:none;
+  outline:none;
+  border-radius:19px;
+  background:#f5f7fa;
+  padding:0 15px;
+  font-size:15px;
+  color:var(--text);
+  margin-bottom:10px;
+}
+
+.input:focus{
+  background:#fff;
+  box-shadow:0 0 0 2px var(--mint),0 8px 18px rgba(0,194,168,0.08);
+}
+
+.agree-box{
+  margin-top:10px;
+  padding:14px;
+  background:#f8fafc;
+  border-radius:18px;
+  color:#475569;
+}
+
+.agree-line{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:13px;
+  font-weight:800;
+}
+
+.agree-line input{
+  width:18px;
+  height:18px;
+}
+
+.notice{
+  font-size:11px;
+  color:#8794a6;
+  line-height:1.45;
+  margin-top:7px;
+}
+
+.submit-btn{
+  width:100%;
+  height:58px;
+  margin-top:16px;
+  border:none;
+  border-radius:20px;
+  background:linear-gradient(135deg,var(--mint),#00a3ff);
+  color:#fff;
+  font-size:17px;
+  font-weight:950;
+  box-shadow:0 16px 30px rgba(0,194,168,0.24);
+  cursor:pointer;
+}
+
+.submit-btn:disabled{
+  background:#a7b0bd;
+  box-shadow:none;
+}
+
+.story{
+  margin:0 20px 18px;
+}
+
+.story-title{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  margin-bottom:12px;
+}
+
+.story-title h3{
+  font-size:21px;
+  color:var(--ink);
+  letter-spacing:-0.6px;
+  font-weight:950;
+}
+
+.story-title p{
+  font-size:12px;
+  color:var(--sub);
+}
+
+.card-stack{
+  display:grid;
+  gap:10px;
+}
+
+.info-card{
+  background:#fff;
+  border-radius:24px;
+  padding:18px;
+  box-shadow:0 10px 24px rgba(15,23,42,0.05);
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.info-icon{
+  width:44px;
+  height:44px;
+  border-radius:17px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f0fdfa;
+  color:#057c6d;
+  font-size:22px;
+  flex:0 0 44px;
+}
+
+.info-card:nth-child(2) .info-icon{
+  background:#fff7ed;
+  color:var(--orange);
+}
+
+.info-card:nth-child(3) .info-icon{
+  background:#eff6ff;
+  color:#2563eb;
+}
+
+.info-card strong{
+  display:block;
+  font-size:15px;
+  font-weight:950;
+  color:var(--ink);
+  margin-bottom:5px;
+}
+
+.info-card span{
+  display:block;
+  font-size:12px;
+  color:var(--sub);
+  line-height:1.45;
+}
+
+.timeline{
+  margin:0 20px 18px;
+  background:#fff;
+  border-radius:30px;
+  padding:22px 18px;
+  box-shadow:0 10px 24px rgba(15,23,42,0.05);
+}
+
+.section-title{
+  font-size:21px;
+  font-weight:950;
+  color:var(--ink);
+  letter-spacing:-0.6px;
+  margin-bottom:17px;
+}
+
+.time-row{
+  position:relative;
+  display:flex;
+  gap:13px;
+  padding-bottom:17px;
+}
+
+.time-row:last-child{
+  padding-bottom:0;
+}
+
+.time-row:before{
+  content:"";
+  position:absolute;
+  left:15px;
+  top:34px;
+  bottom:0;
+  width:1px;
+  background:#dce5ee;
+}
+
+.time-row:last-child:before{display:none;}
+
+.time-num{
+  width:31px;
+  height:31px;
+  border-radius:50%;
+  background:var(--ink);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  font-weight:950;
+  flex:0 0 31px;
+  position:relative;
+  z-index:1;
+}
+
+.time-text strong{
+  display:block;
+  font-size:15px;
+  color:var(--ink);
+  margin-bottom:5px;
+  font-weight:950;
+}
+
+.time-text span{
+  font-size:12px;
+  color:var(--sub);
+  line-height:1.45;
+}
+
+.live{
+  margin:0 20px 20px;
+  background:#102033;
+  color:#fff;
+  border-radius:30px;
+  padding:22px 18px;
+  box-shadow:0 18px 38px rgba(15,23,42,0.18);
+}
+
+.live-title{
+  font-size:20px;
+  font-weight:950;
+  letter-spacing:-0.5px;
+  margin-bottom:5px;
+}
+
+.live-sub{
+  font-size:12px;
+  color:#cbd5e1;
+  margin-bottom:11px;
+}
+
+.live-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:13px 0;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+  font-size:13px;
+}
+
+.live-item:last-child{border-bottom:none;}
+
+.live-left{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+.live-name{font-weight:950;}
+.live-amount{color:#dbeafe;font-weight:800;}
+
+.badge{
+  padding:6px 9px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:950;
+}
+
+.wait{background:#e0f2fe;color:#0369a1;}
+.done{background:#dcfce7;color:#15803d;}
+.ok{background:#ffedd5;color:#c2410c;}
+
+.footer{
+  max-width:480px;
+  margin:0 auto;
+  background:#0f172a;
+  color:#aebbd0;
+  padding:30px 20px 96px;
+  font-size:11px;
+  line-height:1.75;
+}
+
+.footer strong{
+  color:#fff;
+}
+
+.company-info{
+  background:rgba(255,255,255,0.055);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:20px;
+  padding:15px;
+  margin-bottom:22px;
+}
+
+.footer-warning,
+.footer-info{
+  margin-bottom:22px;
+}
+
+.footer a{
+  color:#e5edf8;
+  text-decoration:none;
+}
+
+.footer-copy{
+  text-align:center;
+  color:#8492a8;
+  margin-top:18px;
+}
+
+.bottom-cta{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  max-width:480px;
+  margin:auto;
+  padding:12px 15px 14px;
+  background:rgba(255,255,255,0.94);
+  backdrop-filter:blur(14px);
+  border-top:1px solid rgba(15,23,42,0.06);
+  z-index:9998;
+}
+
+.bottom-cta button{
+  width:100%;
+  height:54px;
+  border:none;
+  border-radius:19px;
+  background:var(--ink);
+  color:#fff;
+  font-size:16px;
+  font-weight:950;
+}
+
+.policy-modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  z-index:10000;
+  padding:18px;
+}
+
+.policy-box{
+  width:100%;
+  max-width:430px;
+  max-height:76vh;
+  overflow-y:auto;
+  background:#fff;
+  margin:72px auto 0;
+  border-radius:24px;
+  padding:22px 20px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.25);
+}
+
+.policy-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:16px;
+  padding-bottom:12px;
+  border-bottom:1px solid #edf0f3;
+}
+
+.policy-head h3{
+  font-size:20px;
+  color:#0f172a;
+  font-weight:950;
+  letter-spacing:-0.5px;
+}
+
+.policy-close{
+  width:34px;
+  height:34px;
+  border:none;
+  border-radius:50%;
+  background:#f2f4f6;
+  color:#333d4b;
+  font-size:22px;
+  line-height:34px;
+  cursor:pointer;
+}
+
+.policy-content{
+  font-size:13px;
+  line-height:1.75;
+  color:#333d4b;
+}
+
+.policy-content strong{
+  color:#0f172a;
+  font-size:14px;
+}
+
+.policy-content p{margin-bottom:10px;}
+
+@media(max-width:360px){
+  .hero h1{font-size:29px;}
+  .form-title h2{font-size:21px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+  <header class="appbar">
+    <div class="logo">
+      <div class="logo-dot">F</div>
+      핀가이드
+    </div>
+    <div class="appbar-pill">상담 안내</div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-card">
+      <div class="hero-label">비대면 금융상품 상담</div>
+      <h1>필요한 금액,<br>간단하게 상담하세요</h1>
+      <p>
+        복잡한 조건 입력 없이 필요한 정보만 남기면<br>
+        상담사가 확인 후 순차적으로 안내드립니다.
+      </p>
+
+      <div class="hero-cta-row">
+        <div class="hero-mini">
+          <strong>간편 접수</strong>
+          <span>모바일 신청</span>
+        </div>
+        <div class="hero-mini">
+          <strong>조건 안내</strong>
+          <span>상황별 상담</span>
+        </div>
+        <div class="hero-mini">
+          <strong>신용조회 없음</strong>
+          <span>접수 단계</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="floating-form" id="formArea">
+    <div class="form-title">
+      <h2>상담 신청하기</h2>
+      <span>1분 접수</span>
+    </div>
+
+    <p class="form-desc">
+      본 서비스는 금융상품을 직접 제공하지 않으며,<br>
+      고객 정보에 따라 제휴 금융사의 상품을 안내하는 중개 서비스입니다.
+    </p>
+
+    <select class="input" id="gender">
+      <option value="">성별 선택</option>
+      <option value="남">남</option>
+      <option value="여">여</option>
+    </select>
+
+    <input class="input" id="name" placeholder="이름">
+    <input class="input" id="phone" placeholder="전화번호">
+
+    <select class="input" id="amount">
+      <option>필요금액 선택</option>
+      <option>500만원 이하</option>
+      <option>500 ~ 1000만원</option>
+      <option>1000 ~ 3000만원</option>
+      <option>3000만원 이상</option>
+    </select>
+
+    <div class="agree-box">
+      <div class="agree-line">
+        <input type="checkbox" id="agree" checked required>
+        <label for="agree">개인정보 수집 및 이용에 동의합니다.</label>
+      </div>
+      <p class="notice">
+        ※ 입력 정보는 상품 안내를 위한 참고용이며, 신용조회는 진행되지 않습니다.
+      </p>
+    </div>
+
+    <button class="submit-btn" id="submitBtn" onclick="sendTelegram()">상담 조건 확인하기</button>
+  </section>
+
+  <section class="story">
+    <div class="story-title">
+      <h3>핀가이드 이용 포인트</h3>
+      <p>간단하고 명확하게</p>
+    </div>
+
+    <div class="card-stack">
+      <div class="info-card">
+        <div class="info-icon">✓</div>
+        <div>
+          <strong>필수 정보만 입력</strong>
+          <span>생년월일, 연락시간, 연체여부 항목 없이 간단히 접수합니다.</span>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">↗</div>
+        <div>
+          <strong>비대면 상담 안내</strong>
+          <span>방문 없이 입력 정보 기준으로 상담 안내가 진행됩니다.</span>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">○</div>
+        <div>
+          <strong>진행 여부 선택</strong>
+          <span>상담 내용을 확인한 뒤 진행 여부를 직접 결정할 수 있습니다.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="timeline">
+    <div class="section-title">진행 순서</div>
+
+    <div class="time-row">
+      <div class="time-num">1</div>
+      <div class="time-text">
+        <strong>상담 신청</strong>
+        <span>성별, 이름, 연락처, 필요금액만 입력합니다.</span>
+      </div>
+    </div>
+
+    <div class="time-row">
+      <div class="time-num">2</div>
+      <div class="time-text">
+        <strong>상담사 확인</strong>
+        <span>입력하신 내용을 기준으로 상담 가능 여부를 확인합니다.</span>
+      </div>
+    </div>
+
+    <div class="time-row">
+      <div class="time-num">3</div>
+      <div class="time-text">
+        <strong>상품 안내</strong>
+        <span>고객 조건에 따라 가능한 상품을 비교 안내합니다.</span>
+      </div>
+    </div>
+
+    <div class="time-row">
+      <div class="time-num">4</div>
+      <div class="time-text">
+        <strong>진행 선택</strong>
+        <span>상담 내용을 확인한 뒤 진행 여부를 결정합니다.</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="live">
+    <div class="live-title">최근 상담 접수 현황</div>
+    <div class="live-sub">개인정보 보호를 위해 일부 정보는 마스킹 처리됩니다.</div>
+    <div id="list"></div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="company-info">
+    <strong>사업자 정보</strong><br>
+    상호 : 드림인터내셔널대부중개<br>
+    대표 : 한공주<br>
+    대부업 등록번호 : 2007-경기부천-대부중개65호
+  </div>
+
+  <div class="footer-warning">
+    <strong>금융상품 안내 고지</strong><br><br>
+    본 서비스는 금융상품을 직접 제공하지 않으며,<br>
+    고객의 조건에 따라 제휴 금융사의 상품을 안내하는 중개 서비스입니다.<br>
+    ※ 본 서비스는 대출 실행 및 승인 여부를 보장하지 않습니다.<br><br>
+
+    대출금리 : 연20%이내 / 연체이자율 : 약정금리+3% (단, 법정 최고금리 20% 이내)<br>
+    취급수수료 등 기타부대비용 없음 / 조기상환조건없음 / 중개수수료 요구하거나 받는 것은 불법입니다.<br>
+    대출시 귀하의 신용등급이 하락할 수 있습니다.<br>
+    과도한 빚은 당신에게 큰 불행을 안겨줄 수 있습니다.
+  </div>
+
+  <div class="footer-info">
+    12개월 ~ 60개월 / 총 대출 비용 예시 : 100만원을 12개월 기간 동안 최대 금리 연 20% 적용하여<br>
+    원리금 균등상환방식으로 이용하는 경우 총 상환 금액 1,111,614원<br>
+    (단, 대출상품 및 상환방법 등 대출계약 내용에 따라 달라질 수 있습니다.)
+  </div>
+
+  <div style="text-align:center; margin-top:15px;">
+    <a href="javascript:void(0)" onclick="openPolicy('privacy')">개인정보처리방침</a>
+    <span style="margin:0 8px;">|</span>
+    <a href="javascript:void(0)" onclick="openPolicy('terms')">이용약관</a>
+  </div>
+
+  <div class="footer-copy">
+    Copyright © 핀가이드 All Rights Reserved.
+  </div>
+</footer>
+
+<div id="policyModal" class="policy-modal">
+  <div class="policy-box">
+    <div class="policy-head">
+      <h3 id="policyTitle">제목</h3>
+      <button type="button" class="policy-close" onclick="closePolicy()">×</button>
+    </div>
+    <div id="policyContent" class="policy-content"></div>
+  </div>
+</div>
+
+<div class="bottom-cta">
+  <button onclick="document.getElementById('formArea').scrollIntoView({behavior:'smooth'});">
+    상담 신청 바로가기
+  </button>
+</div>
+
+<script>
+const names=[
+"김**","이**","박**","최**","정**","강**","조**","윤**","장**","임**",
+"한**","오**","서**","신**","권**","황**","안**","송**","류**","전**",
+"홍**","고**","문**","양**","손**","배**","백**","허**","유**","남**",
+"심**","노**","하**","곽**","성**","차**","주**","우**","구**","민**",
+"진**","엄**","채**","원**","천**","방**","공**","현**","함**","변**"
+];
+
+const amounts=[
+"100만원","200만원","300만원","500만원","700만원",
+"1000만원","1500만원","2000만원","3000만원","5000만원"
+];
+
+const status=[
+{text:"상담중",class:"wait"},
+{text:"신청완료",class:"ok"},
+{text:"상담완료",class:"done"}
+];
+
+function addItem(){
+  const name=names[Math.floor(Math.random()*names.length)];
+  const amount=amounts[Math.floor(Math.random()*amounts.length)];
+  const stat=status[Math.floor(Math.random()*status.length)];
+
+  const div=document.createElement("div");
+  div.className="live-item";
+  div.innerHTML=`
+    <div class="live-left">
+      <div class="live-name">${name} 고객님</div>
+      <div class="live-amount">${amount}</div>
+    </div>
+    <div>
+      <span class="badge ${stat.class}">${stat.text}</span>
+    </div>
+  `;
+
+  const list=document.getElementById("list");
+  list.prepend(div);
+
+  if(list.children.length>5){
+    list.removeChild(list.lastChild);
+  }
+}
+
+for(let i=0;i<3;i++) addItem();
+setInterval(addItem,10000);
+
+let isSubmitting = false;
+
+function sendTelegram(){
+
+const gender = document.getElementById("gender").value;
+const name = document.getElementById("name").value;
+const phone = document.getElementById("phone").value;
+const amount = document.getElementById("amount").value;
+const agree = document.getElementById("agree").checked;
+
+if(!agree){
+  alert("개인정보 수집 및 이용에 동의해주세요.");
+  return;
+}
+
+if(!gender || !name || !phone || amount === "필요금액 선택"){
+  alert("모든 항목을 입력해주세요.");
+  return;
+}
+
+const cleanPhone = phone.replace(/[^0-9]/g, '');
+const submitCounts = JSON.parse(localStorage.getItem("submitCounts") || "{}");
+const currentCount = submitCounts[cleanPhone] || 0;
+
+if(currentCount >= 2){
+  alert("이미 2회 접수된 번호입니다. 상담 연락을 기다려주세요.");
+  return;
+}
+
+if(isSubmitting){
+  alert("이미 접수 처리 중입니다. 잠시만 기다려주세요.");
+  return;
+}
+
+isSubmitting = true;
+const submitBtn = document.getElementById("submitBtn");
+submitBtn.disabled = true;
+submitBtn.innerText = "접수 중...";
+
+const SECRET = "dream_2026_lock";
+
+const url =
+  "https://script.google.com/macros/s/AKfycbzML7PkMvnUhuZYPnLolGBK4cFXYbOgL_MmRFD-zIpzPcvH39pLGXrwdMaMah9O0T7v/exec"
+  + "?secret=" + SECRET
+  + "&referer=" + encodeURIComponent(location.href)
+  + "&gender=" + encodeURIComponent(gender)
+  + "&name=" + encodeURIComponent(name)
+  + "&phone=" + encodeURIComponent(phone)
+  + "&amount=" + encodeURIComponent(amount);
+
+fetch(url, {
+  method: "GET",
+  mode: "no-cors"
+})
+.then(()=>{
+  submitCounts[cleanPhone] = currentCount + 1;
+  localStorage.setItem("submitCounts", JSON.stringify(submitCounts));
+
+  alert("접수완료. 상담사 배정후 연락드리겠습니다.");
+
+  isSubmitting = false;
+  submitBtn.disabled = false;
+  submitBtn.innerText = "상담 조건 확인하기";
+})
+.catch(()=>{
+  alert("접수 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+  isSubmitting = false;
+  submitBtn.disabled = false;
+  submitBtn.innerText = "상담 조건 확인하기";
+});
+}
+
+document.getElementById("phone").addEventListener("input", function(){
+  let value = this.value.replace(/[^0-9]/g, '');
+
+  if(value.length < 4){
+    this.value = value;
+  }else if(value.length < 8){
+    this.value = value.replace(/(\d{3})(\d+)/, "$1-$2");
+  }else{
+    this.value = value.replace(/(\d{3})(\d{4})(\d+)/, "$1-$2-$3");
+  }
+});
+
+function openPolicy(type){
+  const modal = document.getElementById("policyModal");
+  const title = document.getElementById("policyTitle");
+  const content = document.getElementById("policyContent");
+
+  if(type === "privacy"){
+    title.innerText = "개인정보처리방침";
+    content.innerHTML = `
+      <p>드림인터내셔널대부중개는 핀가이드 상담 신청 및 금융상품 안내를 위해 아래와 같은 개인정보를 수집·이용합니다.</p>
+
+      <strong>1. 수집 항목</strong><br>
+      성별, 이름, 연락처, 필요금액 등<br><br>
+
+      <strong>2. 이용 목적</strong><br>
+      상담 신청 확인, 금융상품 상담 안내, 고객 문의 응대, 제휴 금융사 상품 안내<br><br>
+
+      <strong>3. 보유 및 이용 기간</strong><br>
+      상담 목적 달성 후 관련 법령에 따라 필요한 기간 동안 보관 후 파기합니다.<br><br>
+
+      <strong>4. 개인정보 제3자 제공</strong><br>
+      고객 상담 및 상품 안내를 위해 제휴 금융사 또는 상담 담당자에게 필요한 범위 내에서 제공될 수 있습니다.<br><br>
+
+      <strong>5. 동의 거부 권리</strong><br>
+      개인정보 수집 및 이용에 대한 동의를 거부할 수 있으나, 이 경우 상담 신청이 제한될 수 있습니다.
+    `;
+  }
+
+  if(type === "terms"){
+    title.innerText = "이용약관";
+    content.innerHTML = `
+      <p>본 약관은 드림인터내셔널대부중개가 핀가이드를 통해 제공하는 금융상품 상담 안내 서비스 이용에 관한 사항을 규정합니다.</p>
+
+      <strong>1. 서비스 내용</strong><br>
+      본 서비스는 고객이 입력한 정보를 바탕으로 금융상품 상담 및 제휴 금융사의 상품 안내를 제공하는 중개 서비스입니다.<br><br>
+
+      <strong>2. 대출 실행 및 승인</strong><br>
+      본 서비스는 대출 실행 또는 승인 여부를 보장하지 않으며, 실제 가능 여부는 상담 및 심사 결과에 따라 달라질 수 있습니다.<br><br>
+
+      <strong>3. 수수료 안내</strong><br>
+      중개수수료를 요구하거나 받는 행위는 불법이며, 고객에게 별도의 중개수수료를 요구하지 않습니다.<br><br>
+
+      <strong>4. 이용자 책임</strong><br>
+      이용자는 정확한 정보를 입력해야 하며, 허위 정보 입력으로 인한 불이익은 이용자에게 있을 수 있습니다.<br><br>
+
+      <strong>5. 기타</strong><br>
+      본 약관에 명시되지 않은 사항은 관련 법령 및 일반 상관례에 따릅니다.
+    `;
+  }
+
+  modal.style.display = "block";
+  document.body.style.overflow = "hidden";
+}
+
+function closePolicy(){
+  document.getElementById("policyModal").style.display = "none";
+  document.body.style.overflow = "";
+}
+
+document.getElementById("policyModal").addEventListener("click", function(e){
+  if(e.target === this){
+    closePolicy();
+  }
+});
+</script>
+
+</body>
+</html>
