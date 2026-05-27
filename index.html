@@ -894,6 +894,12 @@ fetch(url, {
   submitCounts[cleanPhone] = currentCount + 1;
   localStorage.setItem("submitCounts", JSON.stringify(submitCounts));
 
+  gtag('event', 'conversion', {
+    'send_to': 'AW-18126831450/vxoPCLPmiLQcENr-xcND',
+    'value': 1.0,
+    'currency': 'KRW'
+  });
+
   alert("접수완료. 상담사 배정후 연락드리겠습니다.");
 
   isSubmitting = false;
