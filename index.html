@@ -224,7 +224,7 @@
             </div>
             <div class="field">
               <label for="phone">연락처</label>
-              <input id="phone" required placeholder="010-0000-0000" inputmode="numeric">
+              <input id="phone" required placeholder="010-0000-0000" inputmode="numeric" maxlength="13" autocomplete="tel" pattern="010-[0-9]{4}-[0-9]{4}">
             </div>
             <div class="field">
               <label for="amount">필요 금액</label>
@@ -282,12 +282,17 @@
 
     let isSubmitting = false;
 
-    // 핸드폰 하이픈 자동 포맷팅 가단화
+    // 전화번호는 숫자 11자리까지만 허용하고 010-0000-0000 형식으로 자동 변환
     document.getElementById("phone").addEventListener("input", function(){
-      let value = this.value.replace(/[^0-9]/g, '');
-      if(value.length < 4) this.value = value;
-      else if(value.length < 8) this.value = value.replace(/(\d{3})(\d+)/, "$1-$2");
-      else this.value = value.replace(/(\d{3})(\d{4})(\d+)/, "$1-$2-$3");
+      const numbers = this.value.replace(/[^0-9]/g, "").slice(0, 11);
+
+      if(numbers.length <= 3){
+        this.value = numbers;
+      } else if(numbers.length <= 7){
+        this.value = numbers.replace(/(\d{3})(\d+)/, "$1-$2");
+      } else {
+        this.value = numbers.replace(/(\d{3})(\d{4})(\d{0,4})/, "$1-$2-$3");
+      }
     });
 
     // 생년월일 6자리 자동 제한
@@ -307,7 +312,14 @@
       const submitBtn = document.getElementById("submitBtn");
 
       if(!agree){ alert("이용 동의에 체크해 주세요."); return; }
-      if(birth.length < 6){ alert("생년월일 6자리를 올바르게 입력해 주세요."); return; }
+      if(birth.length !== 6){ alert("생년월일 6자리를 올바르게 입력해 주세요."); return; }
+
+      const phoneNumbers = phone.replace(/[^0-9]/g, "");
+      if(!/^010[0-9]{8}$/.test(phoneNumbers)){
+        alert("연락처를 010-0000-0000 형식으로 정확히 입력해 주세요.");
+        document.getElementById("phone").focus();
+        return;
+      }
 
       if(isSubmitting) return;
       isSubmitting = true;
