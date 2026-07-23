@@ -44,7 +44,6 @@
     .desc{font-size:16px;line-height:1.65;color:#6b7280;margin-bottom:32px}
     .heroBtns{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
     .primary{display:inline-flex;align-items:center;justify-content:center;background:#2563eb;color:#fff;border-radius:14px;padding:18px 32px;font-size:16px;font-weight:900;box-shadow:0 12px 24px rgba(37,99,235,0.18)}
-    .kakaoMain{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#fee500;color:#181600;padding:18px 32px;border-radius:14px;font-size:16px;font-weight:900}
 
     /* 우측 이미지 모형 */
     .heroCard{display:flex;justify-content:center;position:relative}
@@ -102,10 +101,6 @@
     .submit{width:100%;height:60px;border:0;border-radius:14px;background:#2563eb;color:#fff;font-size:18px;font-weight:900;cursor:pointer;transition:all 0.2s}
     .submit:hover{background:#1d4ed8;box-shadow:0 10px 20px rgba(37,99,235,0.2)}
 
-    /* 카카오톡 둥근 플로팅 단추 */
-    .kakaoFixed{position:fixed;right:20px;bottom:90px;width:56px;height:56px;background:#fee500;border-radius:50%;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,0.12);z-index:9999}
-    .kakaoFixed i{font-size:26px;color:#181600}
-
     /* 고지문구 및 하단 면책사항 */
     .notice{padding:24px 0;background:#f9fafb;color:#9ca3af;font-size:13px;line-height:1.65;border-top:1px solid #f1f5f9}
     .footer{background:#fff;color:#1a1f27;padding:44px 0 100px;border-top:1px solid #f1f5f9}
@@ -113,12 +108,11 @@
     .businessInfo h3{margin-bottom:10px;font-size:15px;color:#111827}
     .businessInfo p{margin-bottom:14px;font-size:13px;line-height:1.7;color:#6b7280}
     
-    /* 고정형 하단바 (완벽 비례 고정) */
+    /* 고정형 하단 신청바 */
     .bottomCta{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,0.92);backdrop-filter:blur(15px);border-top:1px solid #f1f5f9;z-index:9998;padding:12px 16px}
     .bottomCta .inner{max-width:1120px;margin:0 auto;display:flex;gap:10px}
     .bottomCta .ctaBtn{display:flex;align-items:center;justify-content:center;height:54px;border-radius:12px;font-weight:900;font-size:16px;transition:0.2s}
     .ctaApply{flex:1;background:#2563eb;color:#fff}
-    .ctaKakao{background:#fee500;color:#181600;width:54px;flex-shrink:0}
 
     /* 📱 모바일 환경 반응형 CSS 전면 재조정 (틀어짐 원천 차단) */
     @media(max-width:860px){
@@ -130,7 +124,7 @@
       .hero{padding:24px 0 40px}
       .hero .wrap{grid-template-columns:1fr; text-align:center; gap:24px}
       .heroBtns{justify-content:center; flex-direction:column; width:100%; gap:8px}
-      .primary, .kakaoMain{width:100%; padding:16px 20px; font-size:15px}
+      .primary{width:100%; padding:16px 20px; font-size:15px}
       .h1{font-size:32px; letter-spacing:-1.2px; margin-bottom:14px}
       .sub{font-size:18px}
       .desc{font-size:15px; margin-bottom:24px}
@@ -181,7 +175,6 @@
           <p class="desc">방문 필요 없이 모바일로 신속하고 간편하게 신청하세요. 전문 상담원이 매칭 가능한 상품군을 알기 쉽게 가이드 해 드립니다.</p>
           <div class="heroBtns">
             <a class="primary" href="#apply">1분 간편 상담 신청하기</a>
-            <a class="kakaoMain" href="https://qr.kakao.com/talk/5qo2cTKVxqmp4DqHRe8soeSHWIc-" target="_blank"><i class="fa-solid fa-comment"></i> 카카오톡 실시간 상담</a>
           </div>
         </div>
 
@@ -265,8 +258,8 @@
       <div class="businessInfo">
         <h3>사업자 고지 사항</h3>
         <p>
-          <strong>상호</strong> : 드림인터내셔널대부중개 (서비스명: 핀가이드)<br>
-          <strong>대부업 등록번호</strong> : 2007-경기부천-대부중개65호
+          <strong>상호</strong> : 우주캐피탈대부  (서비스명: 핀가이드)<br>
+          <strong>대부업 등록번호</strong> : 2023-충북청주-0011
         </p>
         <p style="margin-bottom:0;">
           대출금리 : 연 20% 이내 / 연체이자율 : 약정금리 + 3% (법정 최고금리 연 20% 이내)<br>
@@ -276,15 +269,9 @@
       </div>
     </div>
   </footer>
-
-  <a class="kakaoFixed" href="https://qr.kakao.com/talk/5qo2cTKVxqmp4DqHRe8soeSHWIc-" target="_blank">
-    <i class="fa-solid fa-comment"></i>
-  </a>
-
-  <div class="bottomCta">
+<div class="bottomCta">
     <div class="inner">
       <a class="ctaBtn ctaApply" href="#apply">무료 상담 신청</a>
-      <a class="ctaBtn ctaKakao" href="https://qr.kakao.com/talk/5qo2cTKVxqmp4DqHRe8soeSHWIc-" target="_blank"><i class="fa-solid fa-comment"></i></a>
     </div>
   </div>
 
