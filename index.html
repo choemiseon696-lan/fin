@@ -18,7 +18,7 @@
   <meta name="theme-color" content="#2563eb">
 
 <style>
-    /* 핀테크 앱 스타일 모바일 퍼스트 핵심 리셋 */
+    
     *{box-sizing:border-box; -webkit-tap-highlight-color:transparent; margin:0; padding:0;}
     html{scroll-behavior:smooth}
     body{font-family:"Apple SD Gothic Neo","Noto Sans KR",Arial,sans-serif;background:#ffffff;color:#1a1f27;padding-bottom:88px;line-height:1.4}
@@ -26,7 +26,7 @@
     
     .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
 
-    /* 상단 헤더 */
+    
     .top{height:72px;background:rgba(255,255,255,0.95);position:sticky;top:0;z-index:100;border-bottom:1px solid #f0f2f5;backdrop-filter:blur(10px)}
     .top .wrap{height:100%;display:flex;align-items:center;justify-content:space-between}
     .logo{display:flex;align-items:center;gap:8px;font-size:22px;font-weight:900;color:#2563eb;letter-spacing:-0.8px}
@@ -35,7 +35,7 @@
     .nav a:hover{color:#2563eb}
     .callBtn{background:#2563eb;color:#fff;padding:11px 18px;border-radius:12px;font-weight:800;font-size:14px;box-shadow:0 8px 20px rgba(37,99,235,0.12)}
 
-    /* 메인 대문 (히어로) */
+    
     .hero{background:linear-gradient(180deg, #f8faff 0%, #ffffff 100%); padding:40px 0 60px; overflow:hidden}
     .hero .wrap{display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center}
     .eyebrow{display:inline-flex;padding:8px 14px;border-radius:8px;background:#eff6ff;color:#2563eb;font-weight:800;font-size:14px;margin-bottom:16px}
@@ -46,7 +46,7 @@
     .heroBtns{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
     .primary{display:inline-flex;align-items:center;justify-content:center;background:#2563eb;color:#fff;border-radius:14px;padding:18px 32px;font-size:16px;font-weight:900;box-shadow:0 12px 24px rgba(37,99,235,0.18)}
 
-    /* 우측 이미지 모형 */
+    
     .heroCard{display:flex;justify-content:center;position:relative}
     .phoneMockup{width:290px;height:520px;background:#fff;border:8px solid #111827;border-radius:40px;box-shadow:0 30px 60px rgba(0,0,0,0.08);padding:20px;position:relative}
     .phoneMockup .inner{background:linear-gradient(180deg, #f8faff 0%, #ffffff 100%);height:100%;border-radius:24px;padding:20px;text-align:center}
@@ -56,7 +56,7 @@
     .b1{top:40px;left:-20px}
     .b2{bottom:80px;right:-20px}
 
-    /* 특징안내 및 기본 섹션 디자인 */
+    
     section{padding:70px 0}
     .title{text-align:center;font-size:32px;margin-bottom:14px;font-weight:900;letter-spacing:-1px;color:#111827}
     .lead{text-align:center;color:#6b7280;font-size:16px;margin-bottom:40px;padding:0 10px}
@@ -67,7 +67,7 @@
     .box h3{font-size:19px;margin-bottom:10px;font-weight:800;color:#111827}
     .box p{color:#6b7280;font-size:15px;line-height:1.6}
 
-    /* 폼 영역 전체 리팩토링 (가장 핵심 피드백 반영 원인) */
+    
     .formSec{background:#f9fafb}
     .formBox{max-width:760px;margin:0 auto;background:#fff;border-radius:24px;padding:36px;box-shadow:0 20px 40px rgba(0,0,0,0.03);border:1px solid #f1f5f9}
     .formGrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
@@ -84,7 +84,7 @@
       font-size:16px;
       background:#fdfeff;
       transition:all 0.2s ease;
-      -webkit-appearance:none; /* 모바일 브라우저 자체 드롭다운 디자인 리셋 */
+      -webkit-appearance:none; 
       appearance:none;
     }
     .field select{
@@ -102,24 +102,24 @@
     .submit{width:100%;height:60px;border:0;border-radius:14px;background:#2563eb;color:#fff;font-size:18px;font-weight:900;cursor:pointer;transition:all 0.2s}
     .submit:hover{background:#1d4ed8;box-shadow:0 10px 20px rgba(37,99,235,0.2)}
 
-    /* 고지문구 및 하단 면책사항 */
+    
     .notice{padding:24px 0;background:#f9fafb;color:#9ca3af;font-size:13px;line-height:1.65;border-top:1px solid #f1f5f9}
     .footer{background:#fff;color:#1a1f27;padding:44px 0 100px;border-top:1px solid #f1f5f9}
     .businessInfo{background:#f8faff;border:1px solid #eef2f7;border-radius:16px;padding:24px}
     .businessInfo h3{margin-bottom:10px;font-size:15px;color:#111827}
     .businessInfo p{margin-bottom:14px;font-size:13px;line-height:1.7;color:#6b7280}
     
-    /* 고정형 하단 신청바 */
+   
     .bottomCta{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,0.92);backdrop-filter:blur(15px);border-top:1px solid #f1f5f9;z-index:9998;padding:12px 16px}
     .bottomCta .inner{max-width:1120px;margin:0 auto;display:flex;gap:10px}
     .bottomCta .ctaBtn{display:flex;align-items:center;justify-content:center;height:54px;border-radius:12px;font-weight:900;font-size:16px;transition:0.2s}
     .ctaApply{flex:1;background:#2563eb;color:#fff}
 
-    /* 📱 모바일 환경 반응형 CSS 전면 재조정 (틀어짐 원천 차단) */
+    
     @media(max-width:860px){
       body{padding-bottom:84px}
       .wrap{padding:0 16px}
-      .nav{display:none} /* 모바일 상단 지저분한 메뉴 숨김 */
+      .nav{display:none} 
       .top{height:64px}
       
       .hero{padding:24px 0 40px}
@@ -233,7 +233,7 @@
                 <option value="50만원 ~ 100만원">50만원 ~ 100만원</option>
                 <option value="100만원 ~ 300만원">100만원 ~ 300만원</option>
                 <option value="300만원 ~ 500만원">300만원 ~ 500만원</option>
-                <option value="500만원 ~ 1000만원">500만원 ~ 1,000만원</option>
+                <option value="500만원 ~ 1,000만원">500만원 ~ 1,000만원</option>
               </select>
             </div>
           </div>
@@ -276,78 +276,254 @@
     </div>
   </div>
 
-  <script>
-    const SECRET = "dream_2026_lock";
-    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby4BrK1SFrzimcQBqENzi7-fmwoRsUC1tZyEzb51HWUtPcXcztZh30DqOKXB4gwOOU6/exec";
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-app.js";
+    import { initializeAppCheck, ReCaptchaEnterpriseProvider } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-app-check.js";
+    import { getFirestore, doc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
 
+    const firebaseConfig = {
+      apiKey: "AIzaSyBLWjmGxR19WmIMkzes7NnJr2DniBMuB5k",
+      authDomain: "simusari-intake-2026.firebaseapp.com",
+      projectId: "simusari-intake-2026",
+      storageBucket: "simusari-intake-2026.firebasestorage.app",
+      messagingSenderId: "455525497440",
+      appId: "1:455525497440:web:bea3b5a713565a83b9e105"
+    };
+
+    const RECAPTCHA_SITE_KEY = "6Lel6nQtAAAAAOOV5Dh6Az6IEuN0cpUbUZDQDGCo";
+    const STORAGE_KEY = "simusari_pending_submissions_v2";
+    const SOURCE_NAME = "simusari-web";
+    const RETRY_DELAYS = [0, 800, 1800, 4000, 8000];
+    const REQUEST_TIMEOUT = 20000;
+
+    let servicesPromise = null;
     let isSubmitting = false;
+    let isFlushing = false;
 
-    // 전화번호는 숫자 11자리까지만 허용하고 010-0000-0000 형식으로 자동 변환
-    document.getElementById("phone").addEventListener("input", function(){
-      const numbers = this.value.replace(/[^0-9]/g, "").slice(0, 11);
-
-      if(numbers.length <= 3){
-        this.value = numbers;
-      } else if(numbers.length <= 7){
-        this.value = numbers.replace(/(\d{3})(\d+)/, "$1-$2");
-      } else {
-        this.value = numbers.replace(/(\d{3})(\d{4})(\d{0,4})/, "$1-$2-$3");
+    function getServices() {
+      if (!servicesPromise) {
+        servicesPromise = Promise.resolve().then(() => {
+          const app = initializeApp(firebaseConfig);
+          initializeAppCheck(app, {
+            provider: new ReCaptchaEnterpriseProvider(RECAPTCHA_SITE_KEY),
+            isTokenAutoRefreshEnabled: true
+          });
+          return { db: getFirestore(app) };
+        });
       }
+      return servicesPromise;
+    }
+
+    const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+    function withTimeout(promise, ms) {
+      return Promise.race([
+        promise,
+        new Promise((_, reject) => {
+          const error = new Error("client-timeout");
+          error.code = "client-timeout";
+          setTimeout(() => reject(error), ms);
+        })
+      ]);
+    }
+
+    function makeRequestId() {
+      if (crypto.randomUUID) return crypto.randomUUID();
+      const random = Array.from(crypto.getRandomValues(new Uint32Array(4)))
+        .map(v => v.toString(16).padStart(8, "0")).join("");
+      return Date.now().toString(36) + "-" + random;
+    }
+
+    async function sha256Hex(value) {
+      const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(value));
+      return Array.from(new Uint8Array(digest))
+        .map(v => v.toString(16).padStart(2, "0")).join("");
+    }
+
+    function readQueue() {
+      try {
+        const value = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+        return Array.isArray(value) ? value : [];
+      } catch (_) {
+        return [];
+      }
+    }
+
+    function writeQueue(queue) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(queue));
+    }
+
+    function savePending(payload) {
+      const queue = readQueue();
+      const index = queue.findIndex(item => item.requestId === payload.requestId);
+      if (index >= 0) queue[index] = payload;
+      else queue.push(payload);
+      writeQueue(queue);
+    }
+
+    function removePending(requestId) {
+      writeQueue(readQueue().filter(item => item.requestId !== requestId));
+    }
+
+    function getErrorCode(error) {
+      return String(error?.code || error?.message || "unknown").toLowerCase();
+    }
+
+    function isRetryable(error) {
+      const code = getErrorCode(error);
+      return [
+        "client-timeout", "unavailable", "deadline-exceeded", "aborted",
+        "resource-exhausted", "internal", "unknown", "network-request-failed",
+        "failed-precondition"
+      ].some(value => code.includes(value));
+    }
+
+    async function sendSubmission(payload) {
+      const { db } = await getServices();
+      const ref = doc(db, "submissions", payload.requestId);
+      let lastError = null;
+
+      for (let i = 0; i < RETRY_DELAYS.length; i++) {
+        if (RETRY_DELAYS[i]) await sleep(RETRY_DELAYS[i]);
+        payload.attempts = Number(payload.attempts || 0) + 1;
+        payload.lastAttemptAt = new Date().toISOString();
+        savePending(payload);
+
+        try {
+          await withTimeout(setDoc(ref, {
+            name: payload.name,
+            birth: payload.birth,
+            phone: payload.phone,
+            phoneHash: payload.phoneHash,
+            amount: payload.amount,
+            receivedAt: serverTimestamp(),
+            status: "pending",
+            requestId: payload.requestId,
+            source: SOURCE_NAME
+          }), REQUEST_TIMEOUT);
+          removePending(payload.requestId);
+          return;
+        } catch (error) {
+          lastError = error;
+          const code = getErrorCode(error);
+          
+          if (code.includes("permission-denied") && payload.attempts >= 2) {
+            removePending(payload.requestId);
+            return;
+          }
+          if (!isRetryable(error)) break;
+        }
+      }
+      throw lastError || new Error("submission-failed");
+    }
+
+    async function flushPendingQueue() {
+      if (isFlushing || !navigator.onLine) return;
+      const queue = readQueue();
+      if (!queue.length) return;
+      isFlushing = true;
+      try {
+        for (const payload of queue.slice(0, 10)) {
+          try { await sendSubmission(payload); }
+          catch (error) { console.warn("미전송 접수 재시도 실패", payload.requestId, error); }
+        }
+      } finally {
+        isFlushing = false;
+      }
+    }
+
+    function setButtonState(active) {
+      const button = document.getElementById("submitBtn");
+      button.disabled = active;
+      button.innerText = active ? "안전하게 접수 저장 중..." : "지금 무료 상담 신청하기";
+    }
+
+    document.getElementById("phone").addEventListener("input", function() {
+      const numbers = this.value.replace(/[^0-9]/g, "").slice(0, 11);
+      if (numbers.length <= 3) this.value = numbers;
+      else if (numbers.length <= 7) this.value = numbers.replace(/(\d{3})(\d+)/, "$1-$2");
+      else this.value = numbers.replace(/(\d{3})(\d{4})(\d{0,4})/, "$1-$2-$3");
     });
 
-    // 생년월일 6자리 자동 제한
-    document.getElementById("birth").addEventListener("input", function(){
-      this.value = this.value.replace(/[^0-9]/g, '').slice(0, 6);
+    document.getElementById("birth").addEventListener("input", function() {
+      this.value = this.value.replace(/[^0-9]/g, "").slice(0, 6);
     });
 
-    // 폼 접수 이벤트
-    document.getElementById("applyForm").addEventListener("submit", function(e){
-      e.preventDefault();
-
+    document.getElementById("applyForm").addEventListener("submit", async function(event) {
+      event.preventDefault();
+      const form = event.currentTarget;
       const name = document.getElementById("name").value.trim();
       const birth = document.getElementById("birth").value.trim();
-      const phone = document.getElementById("phone").value.trim();
+      const rawPhone = document.getElementById("phone").value.trim();
       const amount = document.getElementById("amount").value;
       const agree = document.getElementById("agree").checked;
-      const submitBtn = document.getElementById("submitBtn");
 
-      if(!agree){ alert("이용 동의에 체크해 주세요."); return; }
-      if(birth.length !== 6){ alert("생년월일 6자리를 올바르게 입력해 주세요."); return; }
-
-      const phoneNumbers = phone.replace(/[^0-9]/g, "");
-      if(!/^010[0-9]{8}$/.test(phoneNumbers)){
-        alert("연락처를 010-0000-0000 형식으로 정확히 입력해 주세요.");
-        document.getElementById("phone").focus();
-        return;
+      if (!agree) return alert("이용 동의에 체크해 주세요.");
+      const normalizedName = name.replace(/\s/g, "").toLowerCase();
+      const blockedNames = ["test", "테스트", "nosecret", "wrongsecret", "emptysecret", "checktest"];
+      if (blockedNames.includes(normalizedName) || !/^[가-힣a-zA-Z\s]{2,15}$/.test(name)) {
+        alert("이름을 한글 또는 영문 2~15자로 정확히 입력해 주세요.");
+        return document.getElementById("name").focus();
+      }
+      if (!/^[0-9]{6}$/.test(birth)) {
+        alert("생년월일 6자리를 올바르게 입력해 주세요.");
+        return document.getElementById("birth").focus();
       }
 
-      if(isSubmitting) return;
+      const digits = rawPhone.replace(/[^0-9]/g, "");
+      if (!/^010[0-9]{8}$/.test(digits)) {
+        alert("연락처를 010-0000-0000 형식으로 정확히 입력해 주세요.");
+        return document.getElementById("phone").focus();
+      }
+      const blockedPhones = new Set([
+        "01000000000", "01000010001", "01000010002", "01000010003",
+        "01000010009", "01011111111", "01012345678", "01099999999"
+      ]);
+      if (blockedPhones.has(digits)) {
+        alert("사용할 수 없는 연락처입니다. 정확한 번호를 입력해 주세요.");
+        return document.getElementById("phone").focus();
+      }
+
+      const phone = digits.replace(/(\d{3})(\d{4})(\d{4})/, "$1-$2-$3");
+      const allowedAmounts = new Set([
+        "50만원 ~ 100만원", "100만원 ~ 300만원", "300만원 ~ 500만원", "500만원 ~ 1,000만원"
+      ]);
+      if (!allowedAmounts.has(amount)) {
+        alert("필요금액 구간을 선택해 주세요.");
+        return document.getElementById("amount").focus();
+      }
+      if (isSubmitting) return;
+
       isSubmitting = true;
-      submitBtn.disabled = true;
-      submitBtn.innerText = "상담 접수 중...";
-
-      const url = APPS_SCRIPT_URL
-        + "?secret=" + encodeURIComponent(SECRET)
-        + "&name=" + encodeURIComponent(name)
-        + "&birth=" + encodeURIComponent(birth)
-        + "&phone=" + encodeURIComponent(phone)
-        + "&amount=" + encodeURIComponent(amount);
-
-      fetch(url, { method: "GET", mode: "no-cors" })
-      .then(() => {
+      setButtonState(true);
+      try {
+        const payload = {
+          requestId: makeRequestId(),
+          name, birth, phone, amount,
+          phoneHash: await sha256Hex(phone),
+          attempts: 0,
+          savedAtLocal: new Date().toISOString()
+        };
+        // 서버 전송 전 브라우저에 먼저 보관
+        savePending(payload);
+        await sendSubmission(payload);
         alert("상담 접수가 정상 완료되었습니다. 담당 상담사가 빠르게 안내드리겠습니다.");
-        document.getElementById("applyForm").reset();
+        form.reset();
+      } catch (error) {
+        console.error("상담 접수 실패", error);
+        if (getErrorCode(error).includes("permission-denied")) {
+          alert("접수 보안 연결을 확인하고 있습니다. 입력 내용은 이 기기에 임시 보관되었습니다. 잠시 후 다시 시도해 주세요.");
+        } else {
+          alert("네트워크가 일시적으로 원활하지 않습니다. 입력 내용은 이 기기에 임시 보관되며 연결이 복구되면 자동 재전송됩니다.");
+        }
+      } finally {
         isSubmitting = false;
-        submitBtn.disabled = false;
-        submitBtn.innerText = "지금 무료 상담 신청하기";
-      })
-      .catch(() => {
-        alert("네트워크 연결이 일시적으로 원활하지 않습니다. 다시 시도해 주세요.");
-        isSubmitting = false;
-        submitBtn.disabled = false;
-        submitBtn.innerText = "지금 무료 상담 신청하기";
-      });
+        setButtonState(false);
+      }
     });
+
+    window.addEventListener("online", flushPendingQueue);
+    if (readQueue().length) setTimeout(flushPendingQueue, 1200);
   </script>
 </body>
 </html>
